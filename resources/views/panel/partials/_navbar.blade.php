@@ -137,7 +137,7 @@
           <li class="nav-item dropdown d-none d-xl-inline-block">
             <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
               <span class="profile-text">Hola, {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</span>
-              <img class="img-xs rounded-circle" src="/storage/users/{{ Auth::user()->image_id ? Auth::user()->image_id : 'default.jpg' }} " alt="Profile image">
+              <img class="img-xs rounded-circle" src="/storage/users/{{ Auth::user()->image_id ? Auth::user()->image_id : 'default.png' }} " alt="Profile image">
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
               <a class="dropdown-item p-0">

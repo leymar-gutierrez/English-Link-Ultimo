@@ -14,6 +14,12 @@
                  <label for="price" class="">Precio</label>
                  <input type="number" class="form-control" id="price" name="price" v-model="price">
                </div>
+                <div class="col-2 form-group">
+                 <label for="price" class="">Profesor</label>
+                 <select class="" name="teacherid" v-model="teacherid">
+                       <option v-for="(teacher, index) in teachers" v-bind:value='teacher.id' >{{ teacher.first_name }}</option>
+                 </select>
+               </div>
               <div class="col">
               <button type="submit" class="form-control btn btn-primary">Agregar Curso</button>
               </div>
@@ -30,18 +36,27 @@
                    name: '',
                    description: '',
                    price: '',
+                   teacherid:'',
+                   teachers: ''
              }
       },
         mounted() {
-            console.log('Component mounted. 2')
+
+             axios.get('/teachers').then((response) => {
+                  this.teachers = response.data;
+                  console.log(this.teachers)
+            }).catch(function (error) {
+                  Swal('Error al cargar profesores!','You clicked the button!','error');
+});
       },
+
        methods: {
              newCourse() {
                    const params = {
-                        id: this.course.id,
-                        name: this.course.name,
-                        price : this.course.price,
-                        description : this.course.description,
+                        name: this.name,
+                        price : this.price,
+                        description : this.description,
+                        teacherid: this.teacherid
 
                   }
                    axios.post('/courses', params).then((response) => {

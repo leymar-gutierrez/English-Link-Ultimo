@@ -25,6 +25,7 @@ export default {
         },
         methods:{
           onChangeScale (scale) {
+               console.log('hola')
               this.$refs.vueavatar.changeScale(scale)
           },
           saveClicked(){

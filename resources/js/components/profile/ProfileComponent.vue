@@ -3,10 +3,10 @@
              <div class="col-12 grid-margin">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Editar Perfil</h4>
+                  
                   <form class="form-sample">
                     <p class="card-description">
-                      Informacion Personal 
+                      Informacion Personal
                     </p>
                     <div class="row">
                       <div class="col-md-6">

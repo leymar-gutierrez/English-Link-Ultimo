@@ -30,6 +30,7 @@ class CourseController extends Controller
         $course->name = $request->name;
         $course->description = $request->description;
         $course->price = $request->price;
+        $course->teacher_id =  $request->teacherid;
         $course->save();
         return $course;
     }

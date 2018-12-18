@@ -20,12 +20,12 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
-            $table->string('first_name');
-            $table->string('last_name');
+            $table->string('first_name')->nullable();
+            $table->string('last_name')->nullable();
             $table->string('adress')->nullable();
             $table->string('dni', 10)->nullable()->index();
             $table->string('tel', 20)->nullable();
-            $table->string('image_id')->nullable();
+            $table->string('image_id')->default('default.png');
         });
     }
 

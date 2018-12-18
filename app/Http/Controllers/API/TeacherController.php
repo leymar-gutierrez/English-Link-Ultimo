@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Role;
 
 class TeacherController extends Controller
 {
@@ -29,13 +30,14 @@ class TeacherController extends Controller
     public function store(Request $request)
     {
         $user = new User;
+        $role_teacher = Role::where('name', 'teacher')->first();
         $user->first_name = $request->first_name;
         $user->last_name = $request->last_name;
         $user->email = $request->email;
         $user->password = bcrypt($request->dni);
         $user->dni = $request->dni;
-        $user->role = 'teacher';
         $user->save();
+        $user->roles()->attach($role_teacher);
         return $user;
     }
 

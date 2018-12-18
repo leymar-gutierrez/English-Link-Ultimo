@@ -30,7 +30,7 @@ class UserController extends Controller
         $user->first_name = $request->first_name;
         $user->last_name = $request->last_name;
         $user->email = $request->email;
-        $user->password = bcrypt($request->dni);
+        $user->password = bcrypt('englishlink351');
         $user->dni = $request->dni;
         $user->save();
         return $user;
