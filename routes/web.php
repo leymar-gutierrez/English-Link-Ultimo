@@ -47,7 +47,7 @@ Route::get('/home', 'HomeController@index')->name('home');
     /////// SAVE DE Imagen
 
 // Route::get('saveImage', 'ImageController@showSave')->name('showImg');
-// Route::post('saveImage', 'ImageController@saveImage');
+Route::post('saveImage', 'ImageController@saveImage');
 
 
 

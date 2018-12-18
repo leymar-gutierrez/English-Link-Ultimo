@@ -25,7 +25,7 @@ class CreateUsersTable extends Migration
             $table->string('adress')->nullable();
             $table->string('dni', 10)->nullable()->index();
             $table->string('tel', 20)->nullable();
-            $table->smallInteger('image_id')->nullable()->unsigned();
+            $table->string('image_id')->nullable();
         });
     }
 

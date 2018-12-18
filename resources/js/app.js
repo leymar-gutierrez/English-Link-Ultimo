@@ -23,20 +23,26 @@ window.Swal = require('sweetalert2');
  *
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
-Vue.component('my-course-component', require('./components/MyCoursesComponent.vue'));
-Vue.component('course-form-component', require('./components/FormCourseComponent.vue'));
-Vue.component('course-component', require('./components/CourseComponent.vue'));
-Vue.component('my-user-component', require('./components/MyUsersComponent.vue'));
-Vue.component('form-component', require('./components/FormComponent.vue'));
-Vue.component('user-component', require('./components/UserComponent.vue'));
-Vue.component('my-teacher-component', require('./components/MyTeacherComponent.vue'));
-Vue.component('teacher-form-component', require('./components/FormTeacherComponent.vue'));
-Vue.component('teacher-component', require('./components/TeacherComponent.vue'));
+Vue.component('my-course-component', require('./components/forms/MyCoursesComponent.vue'));
+Vue.component('course-form-component', require('./components/forms/FormCourseComponent.vue'));
+Vue.component('course-component', require('./components/forms/CourseComponent.vue'));
+Vue.component('my-user-component', require('./components/forms/MyUsersComponent.vue'));
+Vue.component('form-component', require('./components/forms/FormComponent.vue'));
+Vue.component('user-component', require('./components/forms/UserComponent.vue'));
+Vue.component('my-teacher-component', require('./components/forms/MyTeacherComponent.vue'));
+Vue.component('teacher-form-component', require('./components/forms/FormTeacherComponent.vue'));
+Vue.component('teacher-component', require('./components/forms/TeacherComponent.vue'));
 
 // LOGIN VUE
 
 Vue.component('upload-form-component', require('./components/login/UploadForm.vue'));
 Vue.component('save-image-component', require('./components/login/SaveImage.vue'));
+// Profile Vue
+
+// Vue.component('', require('./components/profile/MyProfileComponent.vue'));
+Vue.component('profile-component', require('./components/profile/ProfileComponent.vue'));
+Vue.component('avatar-vue', require('./components/profile/VueAvatar.vue'));
+// Vue.component('', require('./components/login/FormProfileComponent.vue'));
 
 
 

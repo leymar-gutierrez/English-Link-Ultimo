@@ -4,7 +4,7 @@
             <div class="nav-link">
               <div class="user-wrapper">
                 <div class="profile-image">
-                  <img src="images/faces/face1.jpg" alt="profile image">
+                  <img src="/storage/users/{{ Auth::user()->image_id ? Auth::user()->image_id : 'default.jpg' }} " alt="profile image">
                 </div>
                 <div class="text-wrapper">
                  <p class="profile-name">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</p>

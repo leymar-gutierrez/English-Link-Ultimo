@@ -11,9 +11,13 @@
 
 
 <!-- Seach -->
+<div class="col-12 stretch-card ">
+<div class="card pl-2 pr-2">
 <div class="container mb-2 mt-4">
       <input class="form-control" type="text" placeholder="Buscar" v-model="name">
-      <span class="help is-dark"><strong>{{searchTeacher.length}}</strong> of {{teachers.length}} person found</span>
+      <span class="help is-dark pl-2"><strong>{{searchTeacher.length}}</strong> de {{teachers.length}} encontrados</span>
+</div>
+</div>
 </div>
 
 
@@ -21,27 +25,55 @@
 
 
 <!-- Table -->
-<div class="container">
-            <table class="table">
-             <thead>
-               <tr>
-                <th scope="col">#</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Apellido</th>
-                <th scope="col">DNI</th>
-                <th scope="col">Email</th>
-                <th scope="col">Password</th>
-                <th scope="col">Editar</th>
-                <th scope="col">Eliminar</th>
-               </tr>
-             </thead>
-             <tbody>
-      <!-- teacher -->
-      <teacher-component v-for="(teacher, index) in searchTeacher" :key="teacher.id" :teacher="teacher" @update="updateTeacher(index, ...arguments) "@delete="deleteTeacher(index)"></teacher-component>
-      <!-- teacher End -->
-</tbody>
-</table>
+<div class="col-lg-12 grid-margin stretch-card">
+ <div class="card">
+    <div class="card-body">
+      <h3 class="">Profesores</h3>
+
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Dni</th>
+              <th>Email</th>
+              <th>Password</th>
+            </tr>
+          </thead>
+          <tbody>
+                <!-- teacher -->
+                <teacher-component v-for="(teacher, index) in searchTeacher" :key="teacher.id" :teacher="teacher" @update="updateTeacher(index, ...arguments) "@delete="deleteTeacher(index)"></teacher-component>
+                <!-- teacher End -->
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+ </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                       </div>
                   </div>

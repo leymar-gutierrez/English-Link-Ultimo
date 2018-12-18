@@ -19,11 +19,14 @@ class ImageController extends Controller
 
       if ($request->hasFile('image')) {
       $ext = $request->image->extension();
-      $user = Auth::user()->first_name;
+      $user = Auth::user()->dni;
       $imageName = $user .'.'. $ext;
+      $user = Auth::user();
+      $user->image_id = $imageName;
+      $user->save();
       $nombre = request()->file('image')->storeAS('users', $imageName);
-      $datos = request()->all();
-      $datos['image'] = $nombre;
+      // $datos = request()->all();
+      // $datos['image'] = $nombre;
       }
 
         // if ($request->hasFile('image')) {

@@ -8,7 +8,7 @@ class FrontController extends Controller
 {
     public function home()
     {
-      return view('panel.admin.students');
+   return view('panel.user.profile');
     }
     public function show($slug)
      {

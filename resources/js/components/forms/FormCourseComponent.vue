@@ -1,5 +1,6 @@
 <template>
-    <div class="container">
+      <div class="col-12 stretch-card ">
+      <div class="card pt-4 pb-4 pl-4">
           <form class="form-inline row" v-on:submit.prevent="newCourse()">
                 <div class="col-2 form-group">
                  <label for="name" class="">Nombre</label>
@@ -17,6 +18,8 @@
               <button type="submit" class="form-control btn btn-primary">Agregar Curso</button>
               </div>
             </form>
+    </div>
+    </div>
     </div>
 </template>
 

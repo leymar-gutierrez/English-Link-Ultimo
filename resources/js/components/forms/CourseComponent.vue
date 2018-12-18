@@ -5,9 +5,9 @@
               <td><input v-if="editMode" class="form-control" v-model="course.description" type="text" name="description" value=""></input><p v-else>{{ course.description }}</p></td>
               <!-- <td><input v-if="editMode" class="form-control" v-model="course.teacher_id" type="number" name="" value=""></input><p v-else>{{ course.teacher_id }}</p></td> -->
               <td><input v-if="editMode" class="form-control" v-model="course.price" type="number" name="" value=""></input><p v-else>{{ course.price }}</p></td>
-              <td><button v-if="editMode" class="btn btn-success" v-on:click="onClickUpdate()">Guardar Cambios</button>
-              <button v-else class="btn btn-success" v-on:click="onClickEdit()">Editar</button></td>
-              <td><button class="btn btn-danger" v-on:click="onClickDelete()">Borrar</button></td>
+              <td><button v-if="editMode" class="btn btn-success" v-on:click="onClickUpdate()">Guardar</button>
+              <button v-else class="btn btn-success" v-on:click="onClickEdit()">Editar</button>
+              <button class="btn btn-danger" v-on:click="onClickDelete()">Borrar</button></td>
              </tr>
 
 </template>

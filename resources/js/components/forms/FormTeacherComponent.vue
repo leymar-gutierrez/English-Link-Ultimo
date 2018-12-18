@@ -1,6 +1,7 @@
 <template>
-    <div class="container">
-          <form class="form-inline row" v-on:submit.prevent="newUser()">
+<div class="col-12 stretch-card ">
+      <div class="card pt-4 pb-4 pl-4">
+          <form class="form-inline row" v-on:submit.prevent="newTeacher()">
                 <div class="col-2 form-group">
                  <label for="first_name" class="">Nombre</label>
                  <input type="text"  class="form-control" id="first_name" name="first_name" value="" v-model="first_name">
@@ -26,6 +27,8 @@
               </div>
             </form>
     </div>
+    </div>
+
 </template>
 
 <script>
@@ -43,7 +46,7 @@
             console.log('Component mounted. 2')
       },
        methods: {
-             newUser() {
+             newTeacher() {
                    const params = {
                         first_name : this.first_name,
                         last_name : this.last_name,
@@ -51,9 +54,9 @@
                         password : this.password,
                         dni : this.dni
                   }
-                   axios.post('/users', params).then((response) => {
-                        const user = response.data;
-                        this.$emit('new', user);
+                   axios.post('/teachers', params).then((response) => {
+                        const teacher = response.data;
+                        this.$emit('new', teacher);
 
                         Swal('Usuario agregado!','You clicked the button!','success');
                   }).catch(function (error) {
