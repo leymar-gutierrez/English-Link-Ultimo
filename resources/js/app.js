@@ -48,6 +48,9 @@ Vue.component('avatar-vue', require('./components/profile/VueAvatar.vue'));
 // Agregar User por email a un Course
 Vue.component('course-user', require('./components/courses/MyUserCourseComponent.vue'));
 
+// Show Student List por Course
+Vue.component('show-course-student', require('./components/courses/ShowCourseStudent.vue'));
+
 
 
 // const files = require.context('./', true, /\.vue$/i)

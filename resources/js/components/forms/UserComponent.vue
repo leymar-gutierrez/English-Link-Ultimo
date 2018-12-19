@@ -1,14 +1,14 @@
 <template>
-             <tr>
-              <td><input v-if="editMode" class="form-control" v-model="user.first_name" type="text" name="" value=""></input><p v-else>{{ user.first_name }}</p></td>
-              <td><input v-if="editMode" class="form-control" v-model="user.last_name" type="text" name="" value=""></input><p v-else>{{ user.last_name }}</p></td>
-              <td><input v-if="editMode" class="form-control" v-model="user.dni" type="number" name="" value=""></input><p v-else>{{ user.dni }}</p></td>
-              <td><input v-if="editMode" class="form-control" v-model="user.email" type="text" name="" value=""></input><p v-else>{{ user.email }}</p></td>
-              <td><input type="password" v-if="editMode" class="form-control" v-model="user.password" name="" value=""></input><p v-else>**********</p></td>
-              <td><button v-if="editMode" class="btn btn-inverse-success" v-on:click="onClickUpdate()">Guardar</button>
-              <button v-else class="btn btn-inverse-success" v-on:click="onClickEdit()">Editar</button>
-              <button class="btn btn-inverse-danger" v-on:click="onClickDelete()">Borrar</button></td>
-             </tr>
+      <tr>
+                   <td><input v-if="editMode" class="form-control" v-model="user.first_name" type="text" name="" value=""></input><p v-else>{{ user.first_name }}</p></td>
+                   <td><input v-if="editMode" class="form-control" v-model="user.last_name" type="text" name="" value=""></input><p v-else>{{ user.last_name }}</p></td>
+                   <td><input v-if="editMode" class="form-control" v-model="user.dni" type="number" name="" value=""></input><p v-else>{{ user.dni }}</p></td>
+                   <td><input v-if="editMode" class="form-control" v-model="user.email" type="text" name="" value=""></input><p v-else>{{ user.email }}</p></td>
+                   <td><input type="password" v-if="editMode" class="form-control" v-model="user.password" name="" value=""></input><p v-else>**********</p></td>
+                   <td><button v-if="editMode" class="btn btn-inverse-success" v-on:click="onClickUpdate()">Guardar</button>
+                   <button v-else class="btn btn-inverse-success" v-on:click="onClickEdit()">Editar</button>
+                   <button class="btn btn-inverse-danger" v-on:click="onClickDelete()">Borrar</button></td>
+      </tr>
 
 </template>
 

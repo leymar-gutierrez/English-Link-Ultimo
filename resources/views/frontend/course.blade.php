@@ -7,7 +7,7 @@
 </div>
 <div class="container courses-section">
       <div class="">
-            <p><span>Cursos</span> > <?= $curso->title ?></p>
+            <p><span>Cursos</span> <?= $curso->title ?></p>
       </div>
       <hr>
 </div>

@@ -64,4 +64,41 @@ Route::apiResources([
 ]);
 
 
+
+// ApiController
+Route::post('api/addusercouse', 'ApiController@AddStudentForEmail');
+Route::post('api/showcoursestudent', 'ApiController@showStudentCourse');
+Route::get('api/count/course', 'ApiController@showCountCourse');
+Route::get('api/count/student', 'ApiController@showCountStudent');
+
+
+
+
+
+// GRUPO DE RUTAS DEL AMIN
+
+Route::prefix('admin')->group(function () {
+   Route::get('courses', 'PanelController@showCourses');
+   Route::get('students', 'PanelController@showStudents');
+   Route::get('teachers', 'PanelController@showTeachers');
+   Route::get('all', 'PanelController@showAll');
+});
+
+
+// GRUPO DE RUTAS PARA LOS PROFESORES
+
+Route::prefix('teacher')->group(function () {
+   Route::get('add', 'PanelController@tablaDeCourse');
+   Route::get('students', 'PanelController@studentForCourse');
+});
+
+
+// GRUPO DE RUTAS PARA LOS students
+
+
+Route::prefix('students')->group(function () {
+   Route::get('panel', 'PanelController@panelStudents');
+});
+
+
 // Route::apiResource('courdes', 'API\GradeController');

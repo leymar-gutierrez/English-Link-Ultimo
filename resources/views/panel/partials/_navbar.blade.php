@@ -1,94 +1,94 @@
 <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-        <a class="navbar-brand brand-logo" href="index.html">
-          <img src="images/logo.png" alt="logo" />
+        <a class="navbar-brand brand-logo" href="/index.html">
+          <img src="/images/logo.png" alt="logo" />
         </a>
-        <a class="navbar-brand brand-logo-mini" href="index.html">
-          <img src="images/logo.png" alt="logo" />
+        <a class="navbar-brand brand-logo-mini" href="/index.html">
+          <img src="/images/logo.png" alt="logo" />
         </a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center">
         <ul class="navbar-nav navbar-nav-left header-links d-none d-md-flex">
           <li class="nav-item">
-            <a href="#" class="nav-link">Schedule
-              <span class="badge badge-primary ml-1">New</span>
+            <a href="/#" class="nav-link">Noticias
+              <span class="badge badge-primary ml-1">Nueva</span>
             </a>
           </li>
           <li class="nav-item active">
-            <a href="#" class="nav-link">
-              <i class="mdi mdi-elevation-rise"></i>Reports</a>
+            <a href="/#" class="nav-link">
+              <i class="mdi mdi-elevation-rise"></i>Reportes</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="mdi mdi-bookmark-plus-outline"></i>Score</a>
+            <a href="/#" class="nav-link">
+              <i class="mdi mdi-bookmark-plus-outline"></i>Informacion</a>
           </li>
         </ul>
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item dropdown">
-            <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="/#" data-toggle="dropdown" aria-expanded="false">
               <i class="mdi mdi-file-document-box"></i>
               <span class="count">7</span>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
               <div class="dropdown-item">
-                <p class="mb-0 font-weight-normal float-left">You have 7 unread mails
+                <p class="mb-0 font-weight-normal float-left">Tienes 7 mensajes nuevos
                 </p>
-                <span class="badge badge-info badge-pill float-right">View all</span>
+                <span class="badge badge-info badge-pill float-right">Ver todos</span>
               </div>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item preview-item">
                 <div class="preview-thumbnail">
-                  <img src="images/faces/face4.jpg" alt="image" class="profile-pic">
+                  <img src="/images/faces/face4.jpg" alt="image" class="profile-pic">
                 </div>
                 <div class="preview-item-content flex-grow">
-                  <h6 class="preview-subject ellipsis font-weight-medium text-dark">David Grey
-                    <span class="float-right font-weight-light small-text">1 Minutes ago</span>
+                  <h6 class="preview-subject ellipsis font-weight-medium text-dark">Alejando
+                    <span class="float-right font-weight-light small-text">hace un minuto</span>
                   </h6>
                   <p class="font-weight-light small-text">
-                    The meeting is cancelled
+                    Mensaje
                   </p>
                 </div>
               </a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item preview-item">
                 <div class="preview-thumbnail">
-                  <img src="images/faces/face2.jpg" alt="image" class="profile-pic">
+                  <img src="/images/faces/face2.jpg" alt="image" class="profile-pic">
                 </div>
                 <div class="preview-item-content flex-grow">
-                  <h6 class="preview-subject ellipsis font-weight-medium text-dark">Tim Cook
-                    <span class="float-right font-weight-light small-text">15 Minutes ago</span>
+                  <h6 class="preview-subject ellipsis font-weight-medium text-dark">Nico
+                    <span class="float-right font-weight-light small-text">hace 15 minutos</span>
                   </h6>
                   <p class="font-weight-light small-text">
-                    New product launch
+                    Mensaje
                   </p>
                 </div>
               </a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item preview-item">
                 <div class="preview-thumbnail">
-                  <img src="images/faces/face3.jpg" alt="image" class="profile-pic">
+                  <img src="/images/faces/face3.jpg" alt="image" class="profile-pic">
                 </div>
                 <div class="preview-item-content flex-grow">
-                  <h6 class="preview-subject ellipsis font-weight-medium text-dark"> Johnson
-                    <span class="float-right font-weight-light small-text">18 Minutes ago</span>
+                  <h6 class="preview-subject ellipsis font-weight-medium text-dark"> Leymar
+                    <span class="float-right font-weight-light small-text">hace 18 minutos</span>
                   </h6>
                   <p class="font-weight-light small-text">
-                    Upcoming board meeting
+                    mensaje
                   </p>
                 </div>
               </a>
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="/#" data-toggle="dropdown">
               <i class="mdi mdi-bell"></i>
               <span class="count">4</span>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
               <a class="dropdown-item">
-                <p class="mb-0 font-weight-normal float-left">You have 4 new notifications
+                <p class="mb-0 font-weight-normal float-left">Tienes 4 notificaciones
                 </p>
-                <span class="badge badge-pill badge-warning float-right">View all</span>
+                <span class="badge badge-pill badge-warning float-right">Ver todas</span>
               </a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item preview-item">
@@ -98,9 +98,9 @@
                   </div>
                 </div>
                 <div class="preview-item-content">
-                  <h6 class="preview-subject font-weight-medium text-dark">Application Error</h6>
+                  <h6 class="preview-subject font-weight-medium text-dark">Cuotas por vencer</h6>
                   <p class="font-weight-light small-text">
-                    Just now
+                    Regulariza tus pagos
                   </p>
                 </div>
               </a>
@@ -112,9 +112,9 @@
                   </div>
                 </div>
                 <div class="preview-item-content">
-                  <h6 class="preview-subject font-weight-medium text-dark">Settings</h6>
+                  <h6 class="preview-subject font-weight-medium text-dark">Nueva nota</h6>
                   <p class="font-weight-light small-text">
-                    Private message
+                    Tiene una nueva nota
                   </p>
                 </div>
               </a>
@@ -126,16 +126,16 @@
                   </div>
                 </div>
                 <div class="preview-item-content">
-                  <h6 class="preview-subject font-weight-medium text-dark">New user registration</h6>
+                  <h6 class="preview-subject font-weight-medium text-dark">Nuevo registro</h6>
                   <p class="font-weight-light small-text">
-                    2 days ago
+                    Nuevo usuario registrado
                   </p>
                 </div>
               </a>
             </div>
           </li>
           <li class="nav-item dropdown d-none d-xl-inline-block">
-            <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" id="UserDropdown" href="/#" data-toggle="dropdown" aria-expanded="false">
               <span class="profile-text">Hola, {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</span>
               <img class="img-xs rounded-circle" src="/storage/users/{{ Auth::user()->image_id ? Auth::user()->image_id : 'default.png' }} " alt="Profile image">
             </a>
@@ -153,7 +153,7 @@
                   </div>
                 </div>
               </a>
-              <a class="dropdown-item mt-2">
+              {{-- <a class="dropdown-item mt-2">
                 Manage Accounts
               </a>
               <a class="dropdown-item">
@@ -161,7 +161,7 @@
               </a>
               <a class="dropdown-item">
                 Check Inbox
-              </a>
+              </a> --}}
 
                   <a class="dropdown-item" href="{{ route('logout') }}"
                      onclick="event.preventDefault();

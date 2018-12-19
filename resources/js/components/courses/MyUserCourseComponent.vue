@@ -7,6 +7,7 @@
 
 
        <div v-if="course">
+         <p>{{ coursedata.id }}</p>
          <p>{{ coursedata.name }}</p>
          <p>{{ coursedata.description }}</p>
        </div>
@@ -18,16 +19,13 @@
          <div class="col-sm-6">
              <h2>Agregar Alumnos</h2>
              <small>Escribe el email de los alumnos a agregar en este curso</small>
-             <!-- CREO EL V-MODEL DE LA NUEVA TAREA, LE AGREGO EL METODO (V-ON:KEYUP.ENTER) PARA CUANDO HAGA ENTER -->
              <input type="text" class="form-control" v-model="newEmailUser" v-on:keyup.enter="addEmail" placeholder="Email">
              <br>
-             <!-- AGREGO EL METODO (V-ON:CLICK) PARA CUANDO HAGA CLICK EN EL BOTON GUARDE LA INFORMACION -->
              <button type="submit" class="btn btn-primary btn-sm" name="button" v-on:click="addEmail">Agregar</button>
+             <button type="submit" class="btn btn-primary btn-sm" name="button" v-on:click="createAccounts">Cuentas Cuentas</button>
          </div>
          <div class="col-sm-6">
-             <!-- SI EL ARRAY DE LISTS QUE ESTA EN LA INSTANCIA DE VUE TIENE UN ELEMENTO MUESTRA ESTO -->
              <h2 v-if="lists.length > 0">Lista de Alumnos</h2>
-             <!-- SI EL ARRAY DE LISTS QUE ESTA EN LA INSTANCIA DE VUE NO TIENE ELEMENTOS MUESTRA ESTO -->
              <ul class="list-group">
                <li class="list-group-item"
                    v-for="item in lists">
@@ -72,6 +70,34 @@
                   this.lists.push(this.newEmailUser);
                   this.newEmailUser = '' ;
             },
+            createAccounts() {
+                  // Swat2
+                  Swal({
+                    title: 'Estas seguro que desea añadir los siguientes usuarios?',
+                    text: this.lists.join(' , '),
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: 'Si, quiero agregarlos!',
+                    cancelButtonText: 'No, cancelar'
+                  }).then((result) => {
+                        // Si acepta
+                    if (result.value) {
+                         const params = {
+                             lists : this.lists,
+                             course : this.course
+                       }
+                        axios.post('api/addusercouse', params).then((response) => {
+                             Swal('Usuarios agregados!','You clicked the button!','success');
+                       }).catch(function (error) {
+                             Swal('Error al agregar usuarios!','You clicked the button!','error');
+                       });
+
+                      // Si no acepta
+                    } else if (result.dismiss === Swal.DismissReason.cancel) {
+                      Swal('Cancelado','Los usuarios no se han agregado','error')
+                    }
+                  })
+            },
 
 
       },
@@ -79,5 +105,7 @@
 
       }
 }
+
+
 
 </script>
